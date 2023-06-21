@@ -1,24 +1,32 @@
-class notesModel {
+class NotesModel {
     constructor() {
       //this.counter = 0;
       this.list = [];
     }
 
     addNote(Note) {
-      const noteslist = this.list.push(Note); // Add the item to the list
+      // const noteslist = 
+      this.list.push(Note); // Add the item to the list
 
     }
-  
+
     getNotes() {
-      return console.log(this.list);
+      return this.list;
     }
 
     reset() {
       this.list = [];
-      let emptylist = this.list
-      return console.log(emptylist)
     }
   
   }
   
-  module.exports = notesModel;
+  module.exports = NotesModel;
+
+
+model = new NotesModel();
+model.addNote("Hello my name is Heather")
+model.addNote("Hello please remember to get my dog")
+model.addNote("Hello please remember to buy milk")
+let notes = model.getNotes()
+console.log(notes)
+
